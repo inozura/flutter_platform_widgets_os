@@ -4,21 +4,30 @@
  * See LICENSE for distribution and usage details.
  */
 
+import 'package:fluent_ui/fluent_ui.dart' show AutoSuggestBox;
 import 'package:flutter/cupertino.dart'
     show
-        CupertinoSearchTextField,
         CupertinoColors,
-        OverlayVisibilityMode,
-        CupertinoIcons;
+        CupertinoIcons,
+        CupertinoSearchTextField,
+        OverlayVisibilityMode;
 import 'package:flutter/material.dart' show MaterialStateProperty, SearchBar;
 import 'package:flutter/services.dart' show TextCapitalization, TextInputAction;
 import 'package:flutter/widgets.dart';
 
-import 'platform.dart';
-import 'widget_base.dart';
+import 'package:flutter_extended_platform_widgets/src/platform.dart';
+import 'package:flutter_extended_platform_widgets/src/widget_base.dart';
 
 abstract class _BaseData {
-  _BaseData({
+  final Key? widgetKey;
+  final FocusNode? focusNode;
+  final TextEditingController? controller;
+  final void Function()? onTap;
+  final ValueChanged<String>? onChanged;
+  final TextInputType? keyboardType;
+  final bool? autofocus;
+
+  const _BaseData({
     this.widgetKey,
     this.controller,
     this.focusNode,
@@ -27,13 +36,6 @@ abstract class _BaseData {
     this.keyboardType,
     this.autofocus,
   });
-  final Key? widgetKey;
-  final FocusNode? focusNode;
-  final TextEditingController? controller;
-  final void Function()? onTap;
-  final ValueChanged<String>? onChanged;
-  final TextInputType? keyboardType;
-  final bool? autofocus;
 }
 
 class MaterialSearchBarData extends _BaseData {
@@ -158,11 +160,38 @@ class CupertinoSearchBarData extends _BaseData {
   final String? placeholder;
 }
 
-class PlatformSearchBar
-    extends PlatformWidgetBase<CupertinoSearchTextField, SearchBar> {
-  //Common
-  final Key? widgetKey;
+class FluentSearchBarData extends _BaseData {
+  FluentSearchBarData({
+    // Common
+    super.widgetKey,
+    super.controller,
+    super.focusNode,
+    super.onTap,
+    super.onChanged,
+    //Material
+    this.leading,
+    this.trailing,
+    this.constraints,
+    this.hintText,
+  });
 
+  // final String? hintText;
+  final Widget? leading;
+  final Widget? trailing;
+  final BoxConstraints? constraints;
+  final String? hintText;
+}
+
+class PlatformSearchBar extends PlatformWidgetBase<
+    SearchBar,
+    CupertinoSearchTextField,
+    AutoSuggestBox,
+    CupertinoSearchTextField,
+    SearchBar,
+    SearchBar,
+    SearchBar> {
+  final Key? widgetKey;
+  //Common
   final FocusNode? focusNode;
   final TextEditingController? controller;
   final void Function()? onTap;
@@ -179,8 +208,13 @@ class PlatformSearchBar
   //Platform
   final PlatformBuilder<MaterialSearchBarData>? material;
   final PlatformBuilder<CupertinoSearchBarData>? cupertino;
+  final PlatformBuilder<FluentSearchBarData>? windows;
+  final PlatformBuilder<CupertinoSearchBarData>? macos;
+  final PlatformBuilder<MaterialSearchBarData>? linux;
+  final PlatformBuilder<MaterialSearchBarData>? fuchsia;
+  final PlatformBuilder<MaterialSearchBarData>? web;
 
-  PlatformSearchBar({
+  const PlatformSearchBar({
     //Common
     super.key,
     this.widgetKey,
@@ -198,6 +232,11 @@ class PlatformSearchBar
     //Platform
     this.material,
     this.cupertino,
+    this.windows,
+    this.macos,
+    this.linux,
+    this.fuchsia,
+    this.web,
   });
 
   @override
@@ -243,7 +282,6 @@ class PlatformSearchBar
       padding: data?.padding,
       onSubmitted: data?.onSubmitted,
       textCapitalization: data?.textCapitalization,
-
       textInputAction: data?.textInputAction,
     );
   }
@@ -291,4 +329,40 @@ class PlatformSearchBar
       enabled: data?.enabled,
     );
   }
+
+  @override
+  AutoSuggestBox createWindowsWidget(BuildContext context) {
+    final data = windows?.call(context, platform(context));
+    final onSearchChanged = data?.onChanged ?? onChanged;
+
+    return AutoSuggestBox(
+      key: data?.widgetKey ?? widgetKey,
+      items: const [],
+      controller: data?.controller ?? controller,
+      leadingIcon: data?.leading,
+      trailingIcon: data?.trailing,
+      placeholder: data?.hintText ?? hintText,
+      focusNode: data?.focusNode ?? focusNode,
+      onChanged: onSearchChanged == null
+          ? null
+          : (text, reason) => onSearchChanged(text),
+    );
+  }
+
+  //Todo(mehul): change themes here
+  @override
+  CupertinoSearchTextField createMacosWidget(BuildContext context) =>
+      createCupertinoWidget(context);
+
+  @override
+  SearchBar createLinuxWidget(BuildContext context) =>
+      createMaterialWidget(context);
+
+  @override
+  SearchBar createFuchsiaWidget(BuildContext context) =>
+      createMaterialWidget(context);
+
+  @override
+  SearchBar createWebWidget(BuildContext context) =>
+      createMaterialWidget(context);
 }
