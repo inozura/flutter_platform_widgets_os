@@ -1,6 +1,6 @@
 name: flutter_extended_platform_widgets
 description: Simplifying the use of both Material, Cupertino, Fluent, MacOS, Linux, and Fuchsia widgets with a single widget
-version: 7.0.0+1
+version: 7.0.0+2
 homepage: https://github.com/LahaLuhem/flutter_extended_platform_widgets
 documentation: https://github.com/stryder-dev/flutter_platform_widgets/wiki
 publish_to:

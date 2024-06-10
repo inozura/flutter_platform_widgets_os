@@ -1,3 +1,9 @@
+## [7.0.0+2]
+
+- Fix FluentTabScaffold not changing body with bodyBuilder supplied
+
+#### (Flutter version support: v3.19.6)
+
 ## [7.0.0+1]
 
 #### (Flutter version support: v3.19.6)
