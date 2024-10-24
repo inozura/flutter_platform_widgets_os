@@ -9,8 +9,8 @@ import 'package:flutter/cupertino.dart' show CupertinoPageRoute;
 import 'package:flutter/material.dart' show MaterialPageRoute;
 import 'package:flutter/widgets.dart';
 
-import 'package:flutter_extended_platform_widgets/src/platform.dart';
-import 'package:flutter_extended_platform_widgets/src/widget_base.dart';
+import 'package:flutter_platform_widgets_os/src/platform.dart';
+import 'package:flutter_platform_widgets_os/src/widget_base.dart';
 
 class _BasePageRouteData {
   final WidgetBuilder? builder;

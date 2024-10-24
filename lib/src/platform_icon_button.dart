@@ -10,10 +10,10 @@ import 'package:flutter/cupertino.dart'
 import 'package:flutter/material.dart'
     show ButtonStyle, IconButton, VisualDensity;
 import 'package:flutter/widgets.dart';
-import 'package:flutter_extended_platform_widgets/src/parent_widget_finder.dart';
-import 'package:flutter_extended_platform_widgets/src/platform.dart';
-import 'package:flutter_extended_platform_widgets/src/platform_provider.dart';
-import 'package:flutter_extended_platform_widgets/src/widget_base.dart';
+import 'package:flutter_platform_widgets_os/src/parent_widget_finder.dart';
+import 'package:flutter_platform_widgets_os/src/platform.dart';
+import 'package:flutter_platform_widgets_os/src/platform_provider.dart';
+import 'package:flutter_platform_widgets_os/src/widget_base.dart';
 
 const double _kMinInteractiveDimensionCupertino = 44;
 

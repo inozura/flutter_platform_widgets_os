@@ -23,12 +23,12 @@ import 'package:flutter/material.dart'
         Material,
         Scaffold;
 import 'package:flutter/widgets.dart';
-import 'package:flutter_extended_platform_widgets/src/extensions.dart';
-import 'package:flutter_extended_platform_widgets/src/platform.dart';
-import 'package:flutter_extended_platform_widgets/src/platform_app_bar.dart';
-import 'package:flutter_extended_platform_widgets/src/platform_nav_bar.dart';
-import 'package:flutter_extended_platform_widgets/src/platform_provider.dart';
-import 'package:flutter_extended_platform_widgets/src/widget_base.dart';
+import 'package:flutter_platform_widgets_os/src/extensions.dart';
+import 'package:flutter_platform_widgets_os/src/platform.dart';
+import 'package:flutter_platform_widgets_os/src/platform_app_bar.dart';
+import 'package:flutter_platform_widgets_os/src/platform_nav_bar.dart';
+import 'package:flutter_platform_widgets_os/src/platform_provider.dart';
+import 'package:flutter_platform_widgets_os/src/widget_base.dart';
 
 abstract class _BaseData {
   const _BaseData({
@@ -268,8 +268,8 @@ class PlatformTabScaffold extends PlatformWidgetBase<Widget, Widget, Widget,
     final controller = data?.controller ?? tabController?._material(context);
 
     assert(controller != null, '''
-MaterialTabController cannot be null. 
-    Either have material: (_, __) => MaterialTabScaffoldData(controller: controller) or 
+MaterialTabController cannot be null.
+    Either have material: (_, __) => MaterialTabScaffoldData(controller: controller) or
     PlatformTabScaffold(tabController: controller) ''');
 
     return AnimatedBuilder(
@@ -349,8 +349,8 @@ MaterialTabController cannot be null.
     final controller = data?.controller ?? tabController?._cupertino(context);
 
     assert(controller != null, '''
-CupertinoTabController cannot be null. 
-    Either have material: (_, __) => CupertinoTabScaffoldData(cntroller: controller) or 
+CupertinoTabController cannot be null.
+    Either have material: (_, __) => CupertinoTabScaffoldData(cntroller: controller) or
     PlatformTabScaffold(tabController: controller) ''');
 
     if (cupertinoBuilder == null) {
@@ -519,8 +519,8 @@ CupertinoTabController cannot be null.
     final controller = data?.controller ?? tabController?._windows(context);
 
     assert(controller != null, '''
-FluentTabController cannot be null. 
-    Either have windows: (_, __) => FluentTabScaffoldData(controller: controller) or 
+FluentTabController cannot be null.
+    Either have windows: (_, __) => FluentTabScaffoldData(controller: controller) or
     PlatformTabScaffold(tabController: controller) ''');
 
     return AnimatedBuilder(

@@ -9,11 +9,11 @@ import 'package:fluent_ui/fluent_ui.dart'
 import 'package:flutter/cupertino.dart' show CupertinoAlertDialog;
 import 'package:flutter/material.dart' show AlertDialog, Material;
 import 'package:flutter/widgets.dart';
-import 'package:flutter_extended_platform_widgets/src/extensions.dart';
+import 'package:flutter_platform_widgets_os/src/extensions.dart';
 
-import 'package:flutter_extended_platform_widgets/src/platform.dart';
-import 'package:flutter_extended_platform_widgets/src/platform_provider.dart';
-import 'package:flutter_extended_platform_widgets/src/widget_base.dart';
+import 'package:flutter_platform_widgets_os/src/platform.dart';
+import 'package:flutter_platform_widgets_os/src/platform_provider.dart';
+import 'package:flutter_platform_widgets_os/src/widget_base.dart';
 
 const EdgeInsets _defaultInsetPadding =
     EdgeInsets.symmetric(horizontal: 40, vertical: 24);

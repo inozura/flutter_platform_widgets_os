@@ -8,8 +8,8 @@ import 'package:flutter/cupertino.dart' show CupertinoPage;
 import 'package:flutter/material.dart' show MaterialPage;
 import 'package:flutter/widgets.dart';
 
-import 'package:flutter_extended_platform_widgets/src/platform.dart';
-import 'package:flutter_extended_platform_widgets/src/widget_base.dart';
+import 'package:flutter_platform_widgets_os/src/platform.dart';
+import 'package:flutter_platform_widgets_os/src/widget_base.dart';
 
 abstract class _BasePageData {
   _BasePageData({

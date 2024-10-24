@@ -10,9 +10,9 @@ import 'package:flutter/material.dart'
         Theme,
         showDatePicker;
 import 'package:flutter/widgets.dart';
-import 'package:flutter_extended_platform_widgets/src/platform.dart';
-import 'package:flutter_extended_platform_widgets/src/platform_text_button.dart';
-import 'package:flutter_extended_platform_widgets/src/widget_base.dart';
+import 'package:flutter_platform_widgets_os/src/platform.dart';
+import 'package:flutter_platform_widgets_os/src/platform_text_button.dart';
+import 'package:flutter_platform_widgets_os/src/widget_base.dart';
 
 // Values derived from https://developer.apple.com/design/resources/ and on iOS
 // simulators with "Debug View Hierarchy".

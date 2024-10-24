@@ -1,7 +1,7 @@
 import 'package:flutter/widgets.dart';
 
-import 'package:flutter_extended_platform_widgets/src/platform.dart';
-import 'package:flutter_extended_platform_widgets/src/platform_widget.dart';
+import 'package:flutter_platform_widgets_os/src/platform.dart';
+import 'package:flutter_platform_widgets_os/src/platform_widget.dart';
 
 /// Provides a builder for either the Material or Cupertino platforms
 /// which take a child for common use

@@ -23,12 +23,12 @@ import 'package:flutter/material.dart'
         Scaffold;
 import 'package:flutter/widgets.dart';
 
-import 'package:flutter_extended_platform_widgets/src/extensions.dart';
-import 'package:flutter_extended_platform_widgets/src/platform.dart';
-import 'package:flutter_extended_platform_widgets/src/platform_app_bar.dart';
-import 'package:flutter_extended_platform_widgets/src/platform_nav_bar.dart';
-import 'package:flutter_extended_platform_widgets/src/platform_provider.dart';
-import 'package:flutter_extended_platform_widgets/src/widget_base.dart';
+import 'package:flutter_platform_widgets_os/src/extensions.dart';
+import 'package:flutter_platform_widgets_os/src/platform.dart';
+import 'package:flutter_platform_widgets_os/src/platform_app_bar.dart';
+import 'package:flutter_platform_widgets_os/src/platform_nav_bar.dart';
+import 'package:flutter_platform_widgets_os/src/platform_provider.dart';
+import 'package:flutter_platform_widgets_os/src/widget_base.dart';
 
 abstract class _BaseData {
   _BaseData({

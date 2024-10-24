@@ -10,7 +10,7 @@ import 'package:flutter/material.dart'
     show MaterialStateProperty, MaterialTapTargetSize, Switch;
 import 'package:flutter/widgets.dart';
 import 'package:fluent_ui/fluent_ui.dart' show ToggleSwitch;
-import 'package:flutter_extended_platform_widgets/src/extensions/macos_color_extensions.dart';
+import 'package:flutter_platform_widgets_os/src/extensions/macos_color_extensions.dart';
 import 'package:macos_ui/macos_ui.dart' show MacosColor, MacosSwitch;
 
 import 'platform.dart';

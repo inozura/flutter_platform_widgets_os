@@ -6,7 +6,7 @@
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/widgets.dart';
-import 'package:flutter_extended_platform_widgets/src/platform.dart';
+import 'package:flutter_platform_widgets_os/src/platform.dart';
 
 typedef PlatformBuilder<T> = T Function(
   BuildContext context,

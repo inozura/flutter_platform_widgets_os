@@ -6,7 +6,7 @@ import 'package:flutter/cupertino.dart' show CupertinoIcons;
 import 'package:flutter/material.dart' show Icons;
 import 'package:flutter/services.dart' show PlatformException;
 import 'package:flutter/widgets.dart';
-import 'package:flutter_extended_platform_widgets/src/platform.dart';
+import 'package:flutter_platform_widgets_os/src/platform.dart';
 
 extension PlatformIconsExt on BuildContext {
   /// Render either a Material or Cupertino icon based on the platform

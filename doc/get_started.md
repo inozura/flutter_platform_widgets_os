@@ -8,7 +8,7 @@ Run the following
 $ flutter pub add flutter_platform_widgets
 ```
 
-And then in `pubspec.yaml` 
+And then in `pubspec.yaml`
 
 ```yaml
 dependencies:
@@ -18,11 +18,11 @@ dependencies:
 And for any file you use add this import
 
 ```dart
-import 'package:flutter_extended_platform_widgets/flutter_extended_platform_widgets.dart';
+import 'package:flutter_platform_widgets_os/flutter_platform_widgets_os.dart';
 ```
 
 ---
 
-### Next: 
+### Next:
 
 [App Setup](./app_setup.md)

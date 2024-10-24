@@ -1,7 +1,7 @@
 import 'package:fluent_ui/l10n/generated/fluent_localizations.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_extended_platform_widgets/flutter_extended_platform_widgets.dart';
+import 'package:flutter_platform_widgets_os/flutter_platform_widgets_os.dart';
 
 import 'platform_page.dart.dart';
 

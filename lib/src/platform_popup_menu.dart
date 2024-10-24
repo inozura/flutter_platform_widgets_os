@@ -13,9 +13,9 @@ import 'package:flutter/material.dart'
         PopupMenuPosition,
         kMinInteractiveDimension;
 
-import 'package:flutter_extended_platform_widgets/src/platform.dart';
-import 'package:flutter_extended_platform_widgets/src/platform_widget.dart';
-import 'package:flutter_extended_platform_widgets/src/widget_base.dart';
+import 'package:flutter_platform_widgets_os/src/platform.dart';
+import 'package:flutter_platform_widgets_os/src/platform_widget.dart';
+import 'package:flutter_platform_widgets_os/src/widget_base.dart';
 
 const double _kMenuDividerHeight = 16;
 

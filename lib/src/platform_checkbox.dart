@@ -9,8 +9,8 @@ import 'package:flutter/cupertino.dart' show CupertinoCheckbox;
 import 'package:flutter/material.dart'
     show Checkbox, MaterialStateProperty, MaterialTapTargetSize, VisualDensity;
 import 'package:flutter/widgets.dart';
-import 'package:flutter_extended_platform_widgets/src/platform.dart';
-import 'package:flutter_extended_platform_widgets/src/widget_base.dart';
+import 'package:flutter_platform_widgets_os/src/platform.dart';
+import 'package:flutter_platform_widgets_os/src/widget_base.dart';
 
 abstract class _BaseData {
   _BaseData({

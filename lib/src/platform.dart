@@ -19,7 +19,7 @@ import 'package:flutter/material.dart'
     show Colors, Theme, ThemeData, showDialog, showModalBottomSheet;
 import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
-import 'package:flutter_extended_platform_widgets/flutter_extended_platform_widgets.dart';
+import 'package:flutter_platform_widgets_os/flutter_platform_widgets_os.dart';
 
 const double _defaultScrollControlDisabledMaxHeightRatio = 9.0 / 16.0;
 
