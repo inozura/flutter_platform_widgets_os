@@ -17,7 +17,6 @@ export 'src/platform.dart'
         platformThemeData,
         showPlatformDialog,
         showPlatformModalSheet;
-
 export 'src/platform_alert_dialog.dart';
 export 'src/platform_app.dart';
 export 'src/platform_app_bar.dart';
@@ -37,8 +36,8 @@ export 'src/platform_popup_menu.dart';
 export 'src/platform_provider.dart';
 export 'src/platform_radio.dart';
 export 'src/platform_scaffold.dart';
-export 'src/platform_search_bar.dart';
 export 'src/platform_scrollbar.dart';
+export 'src/platform_search_bar.dart';
 export 'src/platform_slider.dart';
 export 'src/platform_sliver_app_bar.dart';
 export 'src/platform_switch.dart';
