@@ -354,8 +354,6 @@ class FluentAppData extends _BaseData {
     super.localeResolutionCallback,
     super.supportedLocales,
     super.showPerformanceOverlay,
-    super.checkerboardRasterCacheImages,
-    super.checkerboardOffscreenLayers,
     super.showSemanticsDebugger,
     super.debugShowCheckedModeBanner,
     super.scrollBehavior,
@@ -382,8 +380,6 @@ class FluentAppRouterData extends _BaseRouterData {
     super.localeResolutionCallback,
     super.supportedLocales,
     super.showPerformanceOverlay,
-    super.checkerboardRasterCacheImages,
-    super.checkerboardOffscreenLayers,
     super.showSemanticsDebugger,
     super.debugShowCheckedModeBanner,
     super.routeInformationProvider,
@@ -915,13 +911,6 @@ class PlatformApp extends PlatformWidgetBase<MaterialApp, CupertinoApp,
         showPerformanceOverlay: dataRouter?.showPerformanceOverlay ??
             showPerformanceOverlay ??
             false,
-        checkerboardRasterCacheImages:
-            dataRouter?.checkerboardRasterCacheImages ??
-                checkerboardRasterCacheImages ??
-                false,
-        checkerboardOffscreenLayers: dataRouter?.checkerboardOffscreenLayers ??
-            checkerboardOffscreenLayers ??
-            false,
         showSemanticsDebugger:
             dataRouter?.showSemanticsDebugger ?? showSemanticsDebugger ?? false,
         debugShowCheckedModeBanner: dataRouter?.debugShowCheckedModeBanner ??
@@ -965,12 +954,6 @@ class PlatformApp extends PlatformWidgetBase<MaterialApp, CupertinoApp,
             const <Locale>[Locale('en', 'US')],
         showPerformanceOverlay:
             data?.showPerformanceOverlay ?? showPerformanceOverlay ?? false,
-        checkerboardRasterCacheImages: data?.checkerboardRasterCacheImages ??
-            checkerboardRasterCacheImages ??
-            false,
-        checkerboardOffscreenLayers: data?.checkerboardOffscreenLayers ??
-            checkerboardOffscreenLayers ??
-            false,
         showSemanticsDebugger:
             data?.showSemanticsDebugger ?? showSemanticsDebugger ?? false,
         debugShowCheckedModeBanner: data?.debugShowCheckedModeBanner ??
